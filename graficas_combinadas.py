@@ -161,11 +161,7 @@ def grafica_shockley_combinada(series_data: dict) -> Path:
     ax.grid(True, which="both", alpha=0.35)
     ax.legend(fontsize=8, ncol=2, loc="upper left")
 
-    texto = (
-        r"$I = I_s\left[\exp\!\left(\dfrac{eV_D}{n k_B T}\right)-1\right]$"
-        + "\n"
-        + "\n".join(rf"$\chi_\nu^2$ {n}:" for n in fits)
-    )
+    texto = r"$I = I_s\left[\exp\!\left(\dfrac{eV_D}{n k_B T}\right)-1\right]$"
     ax.text(
         0.98,
         0.03,
